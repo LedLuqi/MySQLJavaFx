@@ -20,7 +20,9 @@ public class WorkerLoginController {
 
     public void loginConfirm() {
         String LOG = login.getCharacters().toString();
+        login.clear();
         String PAS = password.getCharacters().toString();
+        password.clear();
         passinfo.setText("   Bajtlu Gorola");
     }
 }
