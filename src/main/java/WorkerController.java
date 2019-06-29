@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class WorkerController {
     @FXML
-    AnchorPane pane;
+    private AnchorPane pane;
 
     public void loginChoice () {
         AnchorPane login = null;

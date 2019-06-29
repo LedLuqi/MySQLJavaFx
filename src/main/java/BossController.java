@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class BossController {
     @FXML
-    AnchorPane pane;
+    private AnchorPane pane;
 
     public void loginChoice () {
         AnchorPane login = null;
@@ -19,6 +19,18 @@ public class BossController {
         }
         pane.getChildren().clear();
         pane.getChildren().add(login);
+
+    }
+
+    public void registerChoice () {
+        AnchorPane register = null;
+        try {
+            register = FXMLLoader.load(getClass().getResource("BossRegister.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        pane.getChildren().clear();
+        pane.getChildren().add(register);
 
     }
 }

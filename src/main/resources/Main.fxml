@@ -1,18 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane fx:id="mainPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main">
    <children>
       <BorderPane layoutX="-2.0" layoutY="-1.0" prefHeight="400.0" prefWidth="600.0">
-         <bottom>
-            <Button mnemonicParsing="false" onAction="#goToWorker" prefHeight="193.0" prefWidth="762.0" text="Worker" BorderPane.alignment="CENTER" />
-         </bottom>
-         <top>
-            <Button mnemonicParsing="false" onAction="#goToBoss" prefHeight="206.0" prefWidth="616.0" text="Boss" BorderPane.alignment="CENTER" />
-         </top>
+         <center>
+            <GridPane BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="268.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="332.0" minWidth="10.0" prefWidth="332.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#goToBoss" prefHeight="55.0" prefWidth="276.0" text="Boss" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <effect>
+                        <InnerShadow choke="0.5" />
+                     </effect>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goToWorker" prefHeight="56.0" prefWidth="277.0" text="Worker" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <effect>
+                        <InnerShadow choke="0.5" />
+                     </effect>
+                  </Button>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Choos type of worker" textAlignment="CENTER" wrappingWidth="300.13671875" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Manager" textAlignment="CENTER" wrappingWidth="601.13671875">
+                     <font>
+                        <Font name="System Italic" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </GridPane>
+         </center>
       </BorderPane>
    </children>
 </AnchorPane>
